@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.3.50</Version>
+    <SymbolConfigObject version="3.5.3.50" />
+    <ProjectInfo name="telaDados" devicename="MyController" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_VISUENUMHORIZONTALALIGNMENT" size="2" swapsize="2" typeclass="Enum" iecname="VISUENUMHORIZONTALALIGNMENT" />
+    <TypeSimple name="T_VISUENUMVERTICALALIGNMENT" size="2" swapsize="2" typeclass="Enum" iecname="VISUENUMVERTICALALIGNMENT" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_DWORD" size="4" swapsize="4" typeclass="DWord" iecname="DWORD" />
+    <TypeUserDef name="T_VisuStructFont" size="96" nativesize="96" typeclass="Userdef" iecname="VisuStructFont">
+      <UserDefElement type="T_STRING" iecname="Name" byteoffset="0" />
+      <UserDefElement type="T_INT" iecname="Height" byteoffset="82" />
+      <UserDefElement type="T_DWORD" iecname="Flags" byteoffset="84" />
+      <UserDefElement type="T_DWORD" iecname="CharSet" byteoffset="88" />
+      <UserDefElement type="T_DWORD" iecname="Color" byteoffset="92" />
+    </TypeUserDef>
+    <TypeUserDef name="T_VisuStructTextProperties" size="100" nativesize="100" typeclass="Userdef" iecname="VisuStructTextProperties">
+      <UserDefElement type="T_VISUENUMHORIZONTALALIGNMENT" iecname="HorizontalAlignment" byteoffset="0" />
+      <UserDefElement type="T_VISUENUMVERTICALALIGNMENT" iecname="VerticalAlignment" byteoffset="2" />
+      <UserDefElement type="T_VisuStructFont" iecname="Font" byteoffset="4" />
+    </TypeUserDef>
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+    <TypeUserDef name="T_VisuStructDynamicTexts" size="246" nativesize="246" typeclass="Userdef" iecname="VisuStructDynamicTexts">
+      <UserDefElement type="T_STRING" iecname="stTextList" byteoffset="0" />
+      <UserDefElement type="T_STRING" iecname="stTextIndex" byteoffset="81" />
+      <UserDefElement type="T_STRING" iecname="stTooltipIndex" byteoffset="162" />
+      <UserDefElement type="T_WORD" iecname="wValidDynamicText" byteoffset="244" />
+    </TypeUserDef>
+    <TypeUserDef name="T_VisuStructDynamicImagePoolList" size="81" nativesize="81" typeclass="Userdef" iecname="VisuStructDynamicImagePoolList">
+      <UserDefElement type="T_STRING" iecname="m_stImagePool" byteoffset="0" />
+    </TypeUserDef>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_POINTER_TO_BYTE" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO BYTE" />
+    <TypeSimple name="T_WSTRING_1_" size="4" swapsize="2" typeclass="WString" iecname="WSTRING(1)" />
+    <TypeSimple name="T_STRING_1_" size="2" swapsize="0" typeclass="String" iecname="STRING(1)" />
+    <TypeArray name="T_ARRAY__0__2500__OF_WORD" size="5002" nativesize="5002" typeclass="Array" iecname="ARRAY [0..2500] OF WORD" basetype="T_WORD">
+      <ArrayDim minrange="0" maxrange="2500" />
+    </TypeArray>
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeUserDef name="T_VisuGlobalDynamicTextTranslator" size="8" nativesize="0" typeclass="Userdef" iecname="VisuGlobalDynamicTextTranslator" />
+    <TypeSimple name="T_VISUENUMLINECAPSTYLE" size="2" swapsize="2" typeclass="Enum" iecname="VISUENUMLINECAPSTYLE" />
+    <TypeSimple name="T_VISUENUMLINEJOINSTYLE" size="2" swapsize="2" typeclass="Enum" iecname="VISUENUMLINEJOINSTYLE" />
+    <TypeSimple name="T_BYTE" size="1" swapsize="1" typeclass="Byte" iecname="BYTE" />
+    <TypeUserDef name="T_VisuStructElementLook" size="20" nativesize="20" typeclass="Userdef" iecname="VisuStructElementLook">
+      <UserDefElement type="T_INT" iecname="iLineWidth" byteoffset="0" />
+      <UserDefElement type="T_DWORD" iecname="dwFillFlags" byteoffset="4" />
+      <UserDefElement type="T_DWORD" iecname="dwFrameFlags" byteoffset="8" />
+      <UserDefElement type="T_VISUENUMLINECAPSTYLE" iecname="wLineCapFlag" byteoffset="12" />
+      <UserDefElement type="T_VISUENUMLINEJOINSTYLE" iecname="wLineJoinFlag" byteoffset="14" />
+      <UserDefElement type="T_BYTE" iecname="iMiterLimit" byteoffset="16" />
+    </TypeUserDef>
+    <TypeUserDef name="T_VisuStructColors" size="8" nativesize="8" typeclass="Userdef" iecname="VisuStructColors">
+      <UserDefElement type="T_DWORD" iecname="dwFrameColor" byteoffset="0" />
+      <UserDefElement type="T_DWORD" iecname="dwFillColor" byteoffset="4" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbSelectionManager" size="48" nativesize="48" typeclass="Userdef" iecname="Visu_FbSelectionManager">
+      <UserDefElement type="T_VisuStructElementLook" iecname="_SelectionLook" byteoffset="8" />
+      <UserDefElement type="T_VisuStructColors" iecname="_SelectionColors" byteoffset="28" />
+      <UserDefElement type="T_INT" iecname="_iFrameOffset" byteoffset="36" />
+      <UserDefElement type="T_DWORD" iecname="_LastActionEvent" byteoffset="40" />
+      <UserDefElement type="T_DWORD" iecname="_dwEnabledSelectionType" byteoffset="44" />
+    </TypeUserDef>
+    <TypeSimple name="T_IVisualisation" size="4" swapsize="4" typeclass="Reference" iecname="IVisualisation" />
+    <TypeArray name="T_ARRAY__0__200__OF_IVisualisation" size="804" nativesize="804" typeclass="Array" iecname="ARRAY [0..200] OF IVisualisation" basetype="T_IVisualisation">
+      <ArrayDim minrange="0" maxrange="200" />
+    </TypeArray>
+    <TypeSimple name="T_STRING_255_" size="256" swapsize="0" typeclass="String" iecname="STRING(255)" />
+    <TypeSimple name="T_IFrameElement" size="4" swapsize="4" typeclass="Reference" iecname="IFrameElement" />
+    <TypeUserDef name="T_Visu_StructFrameRegistrationData" size="264" nativesize="264" typeclass="Userdef" iecname="Visu_StructFrameRegistrationData">
+      <UserDefElement type="T_BOOL" iecname="bRegistered" byteoffset="0" />
+      <UserDefElement type="T_STRING_255_" iecname="stPath" byteoffset="1" />
+      <UserDefElement type="T_IFrameElement" iecname="frame" byteoffset="260" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__400__OF_Visu_StructFrameRegistrationData" size="105864" nativesize="105864" typeclass="Array" iecname="ARRAY [0..400] OF Visu_StructFrameRegistrationData" basetype="T_Visu_StructFrameRegistrationData">
+      <ArrayDim minrange="0" maxrange="400" />
+    </TypeArray>
+    <TypeUserDef name="T_Visu_FbFrameManager" size="105872" nativesize="105872" typeclass="Userdef" iecname="Visu_FbFrameManager">
+      <UserDefElement type="T_ARRAY__0__400__OF_Visu_StructFrameRegistrationData" iecname="_data" byteoffset="8" />
+    </TypeUserDef>
+    <TypeSimple name="T_IVisualisationDialog" size="4" swapsize="4" typeclass="Reference" iecname="IVisualisationDialog" />
+    <TypeArray name="T_ARRAY__0__100__OF_IVisualisationDialog" size="404" nativesize="404" typeclass="Array" iecname="ARRAY [0..100] OF IVisualisationDialog" basetype="T_IVisualisationDialog">
+      <ArrayDim minrange="0" maxrange="100" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__100__OF_DINT" size="404" nativesize="404" typeclass="Array" iecname="ARRAY [0..100] OF DINT" basetype="T_DINT">
+      <ArrayDim minrange="0" maxrange="100" />
+    </TypeArray>
+    <TypeSimple name="T_POINTER_TO_VisuStructClientData" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO VisuStructClientData" />
+    <TypeUserDef name="T_VisuStructPoint" size="4" nativesize="4" typeclass="Userdef" iecname="VisuStructPoint">
+      <UserDefElement type="T_INT" iecname="iX" byteoffset="0" />
+      <UserDefElement type="T_INT" iecname="iY" byteoffset="2" />
+    </TypeUserDef>
+    <TypeUserDef name="T_VisuStructSimpleRectangle" size="8" nativesize="8" typeclass="Userdef" iecname="VisuStructSimpleRectangle">
+      <UserDefElement type="T_VisuStructPoint" iecname="ptTopLeft" byteoffset="0" />
+      <UserDefElement type="T_VisuStructPoint" iecname="ptBottomRight" byteoffset="4" />
+    </TypeUserDef>
+    <TypeSimple name="T_POINTER_TO_ARRAY__0__DIALOG_MAN_MAXQUEUEITEMS__OF_VisuStructDialogUpdateItem" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO ARRAY [0..DIALOG_MAN_MAXQUEUEITEMS] OF VisuStructDialogUpdateItem" />
+    <TypeSimple name="T_POINTER_TO_ARRAY__0__DIALOG_MAN_MAXNUMOFDIALOGS__OF_IVisualisationDialog" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO ARRAY [0..DIALOG_MAN_MAXNUMOFDIALOGS] OF IVisualisationDialog" />
+    <TypeSimple name="T_POINTER_TO_ARRAY__0__DIALOG_MAN_MAXNUMOFDIALOGS__OF_POINTER_TO_VisuStructDialogOutputInfoList" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO ARRAY [0..DIALOG_MAN_MAXNUMOFDIALOGS] OF POINTER TO VisuStructDialogOutputInfoList" />
+    <TypeSimple name="T_POINTER_TO_BOOL" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO BOOL" />
+    <TypeSimple name="T_POINTER_TO_INT" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO INT" />
+    <TypeSimple name="T_POINTER_TO_VisuStructSimpleRectangle" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO VisuStructSimpleRectangle" />
+    <TypeSimple name="T_POINTER_TO_VisuStructDialogOutputInfoList" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO VisuStructDialogOutputInfoList" />
+    <TypeUserDef name="T_VisuStructDialogQueueItem" size="20" nativesize="20" typeclass="Userdef" iecname="VisuStructDialogQueueItem">
+      <UserDefElement type="T_IVisualisationDialog" iecname="dialog" byteoffset="0" />
+      <UserDefElement type="T_POINTER_TO_VisuStructClientData" iecname="pClient" byteoffset="4" />
+      <UserDefElement type="T_POINTER_TO_VisuStructSimpleRectangle" iecname="pRect" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="bOpen" byteoffset="12" />
+      <UserDefElement type="T_BOOL" iecname="bModal" byteoffset="13" />
+      <UserDefElement type="T_BOOL" iecname="bSet" byteoffset="14" />
+      <UserDefElement type="T_POINTER_TO_VisuStructDialogOutputInfoList" iecname="pOutputInfoList" byteoffset="16" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__20__OF_VisuStructDialogQueueItem" size="420" nativesize="420" typeclass="Array" iecname="ARRAY [0..20] OF VisuStructDialogQueueItem" basetype="T_VisuStructDialogQueueItem">
+      <ArrayDim minrange="0" maxrange="20" />
+    </TypeArray>
+    <TypeSimple name="T_POINTER_TO_ARRAY__0__0__OF_POINTER_TO_BYTE" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO ARRAY [0..0] OF POINTER TO BYTE" />
+    <TypeUserDef name="T_VisuFbPtrArrayList" size="16" nativesize="16" typeclass="Userdef" iecname="VisuFbPtrArrayList">
+      <UserDefElement type="T_INT" iecname="m_iFirstFreeIndex" byteoffset="4" />
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__0__OF_POINTER_TO_BYTE" iecname="m_pArrData" byteoffset="8" />
+      <UserDefElement type="T_INT" iecname="m_iCurrentSize" byteoffset="12" />
+      <UserDefElement type="T_INT" iecname="m_iIterator" byteoffset="14" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbDialogManager" size="1344" nativesize="1344" typeclass="Userdef" iecname="Visu_FbDialogManager">
+      <UserDefElement type="T_ARRAY__0__100__OF_IVisualisationDialog" iecname="_data" byteoffset="8" />
+      <UserDefElement type="T_ARRAY__0__100__OF_DINT" iecname="_dialogClientIndex" byteoffset="412" />
+      <UserDefElement type="T_POINTER_TO_VisuStructClientData" iecname="_pClientData" byteoffset="816" />
+      <UserDefElement type="T_VisuStructSimpleRectangle" iecname="_ClientRect" byteoffset="820" />
+      <UserDefElement type="T_IVisualisation" iecname="_visu" byteoffset="828" />
+      <UserDefElement type="T_BOOL" iecname="_bOpenFileDialog" byteoffset="832" />
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__DIALOG_MAN_MAXQUEUEITEMS__OF_VisuStructDialogUpdateItem" iecname="_pclosedUpdateRects" byteoffset="836" />
+      <UserDefElement type="T_DINT" iecname="_nIndexUpdateRects" byteoffset="840" />
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__DIALOG_MAN_MAXNUMOFDIALOGS__OF_IVisualisationDialog" iecname="_pdataModalDialog" byteoffset="844" />
+      <UserDefElement type="T_DINT" iecname="_nIndexModal" byteoffset="848" />
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__DIALOG_MAN_MAXNUMOFDIALOGS__OF_POINTER_TO_VisuStructDialogOutputInfoList" iecname="_pdataModalDialogOutputInfoList" byteoffset="852" />
+      <UserDefElement type="T_DINT" iecname="_nIndexModalDialogOutputInfoList" byteoffset="856" />
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__DIALOG_MAN_MAXNUMOFDIALOGS__OF_IVisualisationDialog" iecname="_pdataNonModalDialog" byteoffset="860" />
+      <UserDefElement type="T_DINT" iecname="_nIndexNonModal" byteoffset="864" />
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__DIALOG_MAN_MAXNUMOFDIALOGS__OF_POINTER_TO_VisuStructDialogOutputInfoList" iecname="_pdataNonModalDialogOutputInfoList" byteoffset="868" />
+      <UserDefElement type="T_DINT" iecname="_nIndexNonModalDialogOutputInfoList" byteoffset="872" />
+      <UserDefElement type="T_POINTER_TO_BOOL" iecname="_pbClientInit" byteoffset="876" />
+      <UserDefElement type="T_DINT" iecname="_nIndexClientInit" byteoffset="880" />
+      <UserDefElement type="T_POINTER_TO_INT" iecname="_pmodalDialogCounter" byteoffset="884" />
+      <UserDefElement type="T_INT" iecname="_modalDialogCounter" byteoffset="888" />
+      <UserDefElement type="T_DINT" iecname="_nIndexModalInt" byteoffset="892" />
+      <UserDefElement type="T_POINTER_TO_INT" iecname="_pnonModalDialogCounter" byteoffset="896" />
+      <UserDefElement type="T_INT" iecname="_nonModalDialogCounter" byteoffset="900" />
+      <UserDefElement type="T_DINT" iecname="_nIndexNonModalInt" byteoffset="904" />
+      <UserDefElement type="T_ARRAY__0__20__OF_VisuStructDialogQueueItem" iecname="_eventQueue" byteoffset="908" />
+      <UserDefElement type="T_VisuFbPtrArrayList" iecname="m_DialogManagerListenerList" byteoffset="1328" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbVisuManager" size="108192" nativesize="108192" typeclass="Userdef" iecname="Visu_FbVisuManager">
+      <UserDefElement type="T_ARRAY__0__200__OF_IVisualisation" iecname="_data" byteoffset="8" />
+      <UserDefElement type="T_Visu_FbFrameManager" iecname="_frameMan" byteoffset="812" />
+      <UserDefElement type="T_Visu_FbDialogManager" iecname="_dialogMan" byteoffset="106684" />
+      <UserDefElement type="T_BOOL" iecname="_bAnyVisChanged" byteoffset="108028" />
+      <UserDefElement type="T_STRING" iecname="_stLastChangedVisu" byteoffset="108029" />
+      <UserDefElement type="T_STRING" iecname="_stLastCallerVisu" byteoffset="108110" />
+    </TypeUserDef>
+    <TypeSimple name="T_IVisuManager" size="4" swapsize="4" typeclass="Reference" iecname="IVisuManager" />
+    <TypeSimple name="T_ISelectionManager" size="4" swapsize="4" typeclass="Reference" iecname="ISelectionManager" />
+    <TypeSimple name="T_IVisuSettingsMgr" size="4" swapsize="4" typeclass="Reference" iecname="IVisuSettingsMgr" />
+    <TypeSimple name="T_IClientDataCreator" size="4" swapsize="4" typeclass="Reference" iecname="IClientDataCreator" />
+    <TypeUserDef name="T_VisuFbClientManager" size="96" nativesize="96" typeclass="Userdef" iecname="VisuFbClientManager">
+      <UserDefElement type="T_IClientDataCreator" iecname="m_ClientCreator" byteoffset="8" />
+      <UserDefElement type="T_VisuFbPtrArrayList" iecname="m_ClientList" byteoffset="12" />
+      <UserDefElement type="T_DINT" iecname="m_diAdditionalClientDataSize" byteoffset="28" />
+      <UserDefElement type="T_VisuFbPtrArrayList" iecname="m_ClientManagerListenerList" byteoffset="32" />
+      <UserDefElement type="T_VisuFbPtrArrayList" iecname="m_AdditionalMemoryClientList" byteoffset="48" />
+      <UserDefElement type="T_VisuFbPtrArrayList" iecname="m_AdditionalMemoryMemoryList" byteoffset="64" />
+      <UserDefElement type="T_VisuFbPtrArrayList" iecname="m_AdditionalMemoryElementList" byteoffset="80" />
+    </TypeUserDef>
+    <TypeSimple name="T_IClientManager2" size="4" swapsize="4" typeclass="Reference" iecname="IClientManager2" />
+    <TypeUserDef name="T_CommonDrawingRoutines" size="4" nativesize="0" typeclass="Userdef" iecname="CommonDrawingRoutines" />
+    <TypeSimple name="T_IVisualizationStyle" size="4" swapsize="4" typeclass="Reference" iecname="IVisualizationStyle" />
+    <TypeSimple name="T_IVisuPaintManagerToUse" size="4" swapsize="4" typeclass="Reference" iecname="IVisuPaintManagerToUse" />
+    <TypeSimple name="T_IVisuUserEventManager" size="4" swapsize="4" typeclass="Reference" iecname="IVisuUserEventManager" />
+    <TypeSimple name="T_POINTER_TO_ARRAY__0__1000__OF_INT" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO ARRAY [0..1000] OF INT" />
+    <TypeSimple name="T_POINTER_TO_ARRAY__0__10000__OF_BYTE" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO ARRAY [0..10000] OF BYTE" />
+    <TypeUserDef name="T_Visu_FbBitHelper" size="12" nativesize="12" typeclass="Userdef" iecname="Visu_FbBitHelper">
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__10000__OF_BYTE" iecname="_pData" byteoffset="4" />
+      <UserDefElement type="T_DINT" iecname="_diArraySizeBits" byteoffset="8" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbClientdataManager" size="32" nativesize="32" typeclass="Userdef" iecname="Visu_FbClientdataManager">
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__1000__OF_INT" iecname="_pRegisteredEntries" byteoffset="4" />
+      <UserDefElement type="T_Visu_FbBitHelper" iecname="_bits" byteoffset="8" />
+      <UserDefElement type="T_DINT" iecname="_diCurrentIndex" byteoffset="20" />
+      <UserDefElement type="T_BOOL" iecname="_subsequentEntries" byteoffset="24" />
+      <UserDefElement type="T_DINT" iecname="_subsequentCount" byteoffset="28" />
+    </TypeUserDef>
+    <TypeSimple name="T_WSTRING" size="162" swapsize="2" typeclass="WString" iecname="WSTRING" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeSimple name="T_VISU_CLIENTTYPE" size="2" swapsize="2" typeclass="Enum" iecname="VISU_CLIENTTYPE" />
+    <TypeSimple name="T_IMemoryManager" size="4" swapsize="4" typeclass="Reference" iecname="IMemoryManager" />
+    <TypeSimple name="T_IInternCommandManager" size="4" swapsize="4" typeclass="Reference" iecname="IInternCommandManager" />
+    <TypeUserDef name="T_Visu_FbClientCreator" size="8" nativesize="0" typeclass="Userdef" iecname="Visu_FbClientCreator" />
+    <TypeUserDef name="T_Visu_FbIecPaintbufferCreator" size="8" nativesize="0" typeclass="Userdef" iecname="Visu_FbIecPaintbufferCreator" />
+    <TypeUserDef name="T_Visu_StructDwordPair" size="8" nativesize="8" typeclass="Userdef" iecname="Visu_StructDwordPair">
+      <UserDefElement type="T_DWORD" iecname="dw1" byteoffset="0" />
+      <UserDefElement type="T_DWORD" iecname="dw2" byteoffset="4" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__10__OF_Visu_StructDwordPair" size="88" nativesize="88" typeclass="Array" iecname="ARRAY [0..10] OF Visu_StructDwordPair" basetype="T_Visu_StructDwordPair">
+      <ArrayDim minrange="0" maxrange="10" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__10__OF_BOOL" size="11" nativesize="11" typeclass="Array" iecname="ARRAY [0..10] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="10" />
+    </TypeArray>
+    <TypeSimple name="T_STRING_40_" size="41" swapsize="0" typeclass="String" iecname="STRING(40)" />
+    <TypeUserDef name="T_Visu_FbShmPaintbufferCreator" size="156" nativesize="156" typeclass="Userdef" iecname="Visu_FbShmPaintbufferCreator">
+      <UserDefElement type="T_ARRAY__0__10__OF_Visu_StructDwordPair" iecname="_arrCurrentShms" byteoffset="8" />
+      <UserDefElement type="T_ARRAY__0__10__OF_BOOL" iecname="_arrUsedShms" byteoffset="96" />
+      <UserDefElement type="T_DWORD" iecname="_dwClientId" byteoffset="108" />
+      <UserDefElement type="T_STRING_40_" iecname="_stBaseName" byteoffset="112" />
+    </TypeUserDef>
+    <TypeSimple name="T_IEditBoxInputHandler" size="4" swapsize="4" typeclass="Reference" iecname="IEditBoxInputHandler" />
+    <TypeSimple name="T_IKeyEventHandler" size="4" swapsize="4" typeclass="Reference" iecname="IKeyEventHandler" />
+    <TypeSimple name="T_IMouseEventHandler" size="4" swapsize="4" typeclass="Reference" iecname="IMouseEventHandler" />
+    <TypeSimple name="T_ISpecialEventHandler" size="4" swapsize="4" typeclass="Reference" iecname="ISpecialEventHandler" />
+    <TypeUserDef name="T_Visu_FbUserEventManager" size="24" nativesize="24" typeclass="Userdef" iecname="Visu_FbUserEventManager">
+      <UserDefElement type="T_IEditBoxInputHandler" iecname="_editBoxEventHandler" byteoffset="8" />
+      <UserDefElement type="T_IKeyEventHandler" iecname="_keyEventHandler" byteoffset="12" />
+      <UserDefElement type="T_IMouseEventHandler" iecname="_mouseEventHandler" byteoffset="16" />
+      <UserDefElement type="T_ISpecialEventHandler" iecname="_specialEventHandler" byteoffset="20" />
+    </TypeUserDef>
+    <TypeSimple name="T_IVisuUserMgmtCyclicCall" size="4" swapsize="4" typeclass="Reference" iecname="IVisuUserMgmtCyclicCall" />
+    <TypeSimple name="T_IDialogManagerListener" size="4" swapsize="4" typeclass="Reference" iecname="IDialogManagerListener" />
+    <TypeUserDef name="T_Visu_FbOnlineChangeChecker" size="24" nativesize="24" typeclass="Userdef" iecname="Visu_FbOnlineChangeChecker">
+      <UserDefElement type="T_DINT" iecname="diOldElementCount" byteoffset="4" />
+      <UserDefElement type="T_DINT" iecname="diOldPaintBufferSize" byteoffset="8" />
+      <UserDefElement type="T_DINT" iecname="diOldClientEntriesCount" byteoffset="12" />
+      <UserDefElement type="T_DINT" iecname="diOldStyleChecksum" byteoffset="16" />
+      <UserDefElement type="T_BOOL" iecname="_bCompleteInitNeeded" byteoffset="20" />
+    </TypeUserDef>
+    <TypeSimple name="T_IVisualElement" size="4" swapsize="4" typeclass="Reference" iecname="IVisualElement" />
+    <TypeUserDef name="T_VisuStructNativeControlItem" size="16" nativesize="16" typeclass="Userdef" iecname="VisuStructNativeControlItem">
+      <UserDefElement type="T_DWORD" iecname="dwID" byteoffset="0" />
+      <UserDefElement type="T_POINTER_TO_VisuStructClientData" iecname="pClient" byteoffset="4" />
+      <UserDefElement type="T_IVisualElement" iecname="iElement" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="bSet" byteoffset="12" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__100__OF_VisuStructNativeControlItem" size="1616" nativesize="1616" typeclass="Array" iecname="ARRAY [0..100] OF VisuStructNativeControlItem" basetype="T_VisuStructNativeControlItem">
+      <ArrayDim minrange="0" maxrange="100" />
+    </TypeArray>
+    <TypeUserDef name="T_Visu_FbNativeControlManager" size="3236" nativesize="3236" typeclass="Userdef" iecname="Visu_FbNativeControlManager">
+      <UserDefElement type="T_ARRAY__0__100__OF_VisuStructNativeControlItem" iecname="m_arrIDs" byteoffset="4" />
+      <UserDefElement type="T_ARRAY__0__100__OF_VisuStructNativeControlItem" iecname="m_arrHideIDs" byteoffset="1620" />
+    </TypeUserDef>
+    <TypeSimple name="T_POINTER_TO_ARRAY__0__10__OF_VisuStruct_StyleEntry" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO ARRAY [0..10] OF VisuStruct_StyleEntry" />
+    <TypeUserDef name="T_VisualizationStyle" size="16" nativesize="16" typeclass="Userdef" iecname="VisualizationStyle">
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__10__OF_VisuStruct_StyleEntry" iecname="_aValues" byteoffset="8" />
+      <UserDefElement type="T_INT" iecname="_iValueCount" byteoffset="12" />
+    </TypeUserDef>
+    <TypeSimple name="T_ICallOnInitialize" size="4" swapsize="4" typeclass="Reference" iecname="ICallOnInitialize" />
+    <TypeArray name="T_ARRAY__0__1__OF_ICallOnInitialize" size="8" nativesize="8" typeclass="Array" iecname="ARRAY [0..1] OF ICallOnInitialize" basetype="T_ICallOnInitialize">
+      <ArrayDim minrange="0" maxrange="1" />
+    </TypeArray>
+    <TypeUserDef name="T_Visu_FbInitOnStartup" size="16" nativesize="16" typeclass="Userdef" iecname="Visu_FbInitOnStartup">
+      <UserDefElement type="T_ARRAY__0__1__OF_ICallOnInitialize" iecname="_arr" byteoffset="4" />
+      <UserDefElement type="T_INT" iecname="_iCount" byteoffset="12" />
+    </TypeUserDef>
+    <TypeSimple name="T_IKeyHandler" size="4" swapsize="4" typeclass="Reference" iecname="IKeyHandler" />
+    <TypeUserDef name="T_Visu_FbEventWrapper" size="88" nativesize="88" typeclass="Userdef" iecname="Visu_FbEventWrapper">
+      <UserDefElement type="T_STRING" iecname="_stAppName" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="_bFirstCall" byteoffset="85" />
+    </TypeUserDef>
+    <TypeSimple name="T_IDataServer2" size="4" swapsize="4" typeclass="Reference" iecname="IDataServer2" />
+    <TypeSimple name="T_IGeneralCommand" size="4" swapsize="4" typeclass="Reference" iecname="IGeneralCommand" />
+    <TypeArray name="T_ARRAY__0__19__OF_IGeneralCommand" size="80" nativesize="80" typeclass="Array" iecname="ARRAY [0..19] OF IGeneralCommand" basetype="T_IGeneralCommand">
+      <ArrayDim minrange="0" maxrange="19" />
+    </TypeArray>
+    <TypeUserDef name="T_CommandManager" size="92" nativesize="92" typeclass="Userdef" iecname="CommandManager">
+      <UserDefElement type="T_ARRAY__0__19__OF_IGeneralCommand" iecname="_cmds" byteoffset="8" />
+      <UserDefElement type="T_INT" iecname="i" byteoffset="88" />
+    </TypeUserDef>
+    <TypeSimple name="T_IResourceEntry" size="4" swapsize="4" typeclass="Reference" iecname="IResourceEntry" />
+    <TypeUserDef name="T_Visu_ResourcesEntry" size="8" nativesize="8" typeclass="Userdef" iecname="Visu_ResourcesEntry">
+      <UserDefElement type="T_IVisualisation" iecname="visOld" byteoffset="0" />
+      <UserDefElement type="T_IResourceEntry" iecname="resource" byteoffset="4" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__19__OF_Visu_ResourcesEntry" size="160" nativesize="160" typeclass="Array" iecname="ARRAY [0..19] OF Visu_ResourcesEntry" basetype="T_Visu_ResourcesEntry">
+      <ArrayDim minrange="0" maxrange="19" />
+    </TypeArray>
+    <TypeSimple name="T_IDataServerActionRecord" size="4" swapsize="4" typeclass="Reference" iecname="IDataServerActionRecord" />
+    <TypeUserDef name="T_Visu_DataserverResourceEntry" size="12" nativesize="12" typeclass="Userdef" iecname="Visu_DataserverResourceEntry">
+      <UserDefElement type="T_IDataServerActionRecord" iecname="_dsRecord" byteoffset="8" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__19__OF_Visu_DataserverResourceEntry" size="240" nativesize="240" typeclass="Array" iecname="ARRAY [0..19] OF Visu_DataserverResourceEntry" basetype="T_Visu_DataserverResourceEntry">
+      <ArrayDim minrange="0" maxrange="19" />
+    </TypeArray>
+    <TypeUserDef name="T_Visu_EmptyResourceEntry" size="8" nativesize="0" typeclass="Userdef" iecname="Visu_EmptyResourceEntry" />
+    <TypeUserDef name="T_Visu_ResourcesTable" size="420" nativesize="420" typeclass="Userdef" iecname="Visu_ResourcesTable">
+      <UserDefElement type="T_ARRAY__0__19__OF_Visu_ResourcesEntry" iecname="_entries" byteoffset="4" />
+      <UserDefElement type="T_INT" iecname="_iEntriesCount" byteoffset="164" />
+      <UserDefElement type="T_ARRAY__0__19__OF_Visu_DataserverResourceEntry" iecname="_dsEntries" byteoffset="168" />
+      <UserDefElement type="T_INT" iecname="_iUsedDsEntries" byteoffset="408" />
+      <UserDefElement type="T_Visu_EmptyResourceEntry" iecname="_emptyResource" byteoffset="412" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbExitChecker" size="8" nativesize="8" typeclass="Userdef" iecname="Visu_FbExitChecker">
+      <UserDefElement type="T_POINTER_TO_BOOL" iecname="_pToSetOnExit" byteoffset="4" />
+    </TypeUserDef>
+    <TypeSimple name="T_ICommandManager" size="4" swapsize="4" typeclass="Reference" iecname="ICommandManager" />
+    <TypeSimple name="T_IVisuGlobalClientManager" size="4" swapsize="4" typeclass="Reference" iecname="IVisuGlobalClientManager" />
+    <TypeUserDef name="T_Vish_HavetomanageClient_Data" size="12" nativesize="12" typeclass="Userdef" iecname="Vish_HavetomanageClient_Data">
+      <UserDefElement type="T_INT" iecname="iSize" byteoffset="0" />
+      <UserDefElement type="T_DWORD" iecname="dwExternID" byteoffset="4" />
+      <UserDefElement type="T_DWORD" iecname="dwFlags" byteoffset="8" />
+    </TypeUserDef>
+    <TypeUserDef name="T_VisuStructEvent" size="40" nativesize="40" typeclass="Userdef" iecname="VisuStructEvent">
+      <UserDefElement type="T_INT" iecname="iStructSize" byteoffset="0" />
+      <UserDefElement type="T_DWORD" iecname="EventTag" byteoffset="4" />
+      <UserDefElement type="T_DWORD" iecname="dwParam1" byteoffset="8" />
+      <UserDefElement type="T_DWORD" iecname="dwParam2" byteoffset="12" />
+      <UserDefElement type="T_DWORD" iecname="clientID" byteoffset="16" />
+      <UserDefElement type="T_DWORD" iecname="dwAddDataSize" byteoffset="20" />
+      <UserDefElement type="T_POINTER_TO_BYTE" iecname="pAdditionalData" byteoffset="24" />
+      <UserDefElement type="T_BOOL" iecname="bImportantInput" byteoffset="28" />
+      <UserDefElement type="T_VisuStructSimpleRectangle" iecname="rOptInvalidRect" byteoffset="30" />
+    </TypeUserDef>
+    <TypeSimple name="T_IDialogManager" size="4" swapsize="4" typeclass="Reference" iecname="IDialogManager" />
+    <TypeUserDef name="T_Visu_FbTargetvisuWatcher" size="8" nativesize="8" typeclass="Userdef" iecname="Visu_FbTargetvisuWatcher">
+      <UserDefElement type="T_DWORD" iecname="_dwHandle" byteoffset="4" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TON" size="28" nativesize="28" typeclass="Userdef" iecname="TON">
+      <UserDefElement type="T_BOOL" iecname="IN" byteoffset="4" />
+      <UserDefElement type="T_TIME" iecname="PT" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="Q" byteoffset="12" />
+      <UserDefElement type="T_TIME" iecname="ET" byteoffset="16" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbCyclicTimer" size="44" nativesize="44" typeclass="Userdef" iecname="Visu_FbCyclicTimer">
+      <UserDefElement type="T_TIME" iecname="PT" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Q" byteoffset="8" />
+      <UserDefElement type="T_TON" iecname="_base" byteoffset="12" />
+      <UserDefElement type="T_BOOL" iecname="_firstCall" byteoffset="40" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbTargetvisu" size="68" nativesize="68" typeclass="Userdef" iecname="Visu_FbTargetvisu">
+      <UserDefElement type="T_BOOL" iecname="bToStartTargetVisu" byteoffset="4" />
+      <UserDefElement type="T_Visu_FbTargetvisuWatcher" iecname="tvWatcher" byteoffset="8" />
+      <UserDefElement type="T_BOOL" iecname="_bTargetVisuHandled" byteoffset="16" />
+      <UserDefElement type="T_DWORD" iecname="_dwTargetvisuHandle" byteoffset="20" />
+      <UserDefElement type="T_Visu_FbCyclicTimer" iecname="_openTimer" byteoffset="24" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbWebserver" size="8" nativesize="8" typeclass="Userdef" iecname="Visu_FbWebserver">
+      <UserDefElement type="T_BOOL" iecname="_bRequested" byteoffset="4" />
+    </TypeUserDef>
+    <TypeSimple name="T_POINTER_TO_ARRAY__0__100__OF_IInternCommand" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO ARRAY [0..100] OF IInternCommand" />
+    <TypeSimple name="T_IInternUserCommand" size="4" swapsize="4" typeclass="Reference" iecname="IInternUserCommand" />
+    <TypeArray name="T_ARRAY__0__10__OF_IInternUserCommand" size="44" nativesize="44" typeclass="Array" iecname="ARRAY [0..10] OF IInternUserCommand" basetype="T_IInternUserCommand">
+      <ArrayDim minrange="0" maxrange="10" />
+    </TypeArray>
+    <TypeUserDef name="T_Visu_FbInternCommandManager" size="60" nativesize="60" typeclass="Userdef" iecname="Visu_FbInternCommandManager">
+      <UserDefElement type="T_POINTER_TO_ARRAY__0__100__OF_IInternCommand" iecname="_pStdCommands" byteoffset="8" />
+      <UserDefElement type="T_INT" iecname="_iStdCommandCount" byteoffset="12" />
+      <UserDefElement type="T_ARRAY__0__10__OF_IInternUserCommand" iecname="_registeredCommands" byteoffset="16" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbExecuteClientApplication" size="8" nativesize="0" typeclass="Userdef" iecname="Visu_FbExecuteClientApplication" />
+    <TypeUserDef name="T_Visu_FbExecutePlcApplication" size="8" nativesize="0" typeclass="Userdef" iecname="Visu_FbExecutePlcApplication" />
+    <TypeUserDef name="T_Visu_StructRecipeFileDialogParams" size="162" nativesize="162" typeclass="Userdef" iecname="Visu_StructRecipeFileDialogParams">
+      <UserDefElement type="T_STRING" iecname="stRecipeDefinition" byteoffset="0" />
+      <UserDefElement type="T_STRING" iecname="stRecipe" byteoffset="81" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__1__OF_Visu_StructRecipeFileDialogParams" size="324" nativesize="324" typeclass="Array" iecname="ARRAY [0..1] OF Visu_StructRecipeFileDialogParams" basetype="T_Visu_StructRecipeFileDialogParams">
+      <ArrayDim minrange="0" maxrange="1" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__1__OF_BOOL" size="2" nativesize="2" typeclass="Array" iecname="ARRAY [0..1] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="1" />
+    </TypeArray>
+    <TypeSimple name="T_IFileDialogUser" size="4" swapsize="4" typeclass="Reference" iecname="IFileDialogUser" />
+    <TypeUserDef name="T_Visu_StructFileDialogParams" size="8" nativesize="8" typeclass="Userdef" iecname="Visu_StructFileDialogParams">
+      <UserDefElement type="T_POINTER_TO_BYTE" iecname="pData" byteoffset="0" />
+      <UserDefElement type="T_IFileDialogUser" iecname="caller" byteoffset="4" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__1__OF_STRING" size="162" nativesize="162" typeclass="Array" iecname="ARRAY [0..1] OF STRING" basetype="T_STRING">
+      <ArrayDim minrange="0" maxrange="1" />
+    </TypeArray>
+    <TypeUserDef name="T_Visu_StructVisuFileDialogParams" size="768" nativesize="768" typeclass="Userdef" iecname="Visu_StructVisuFileDialogParams">
+      <UserDefElement type="T_Visu_StructFileDialogParams" iecname="dialogParams" byteoffset="0" />
+      <UserDefElement type="T_POINTER_TO_VisuStructClientData" iecname="pClient" byteoffset="8" />
+      <UserDefElement type="T_STRING" iecname="stTitle" byteoffset="12" />
+      <UserDefElement type="T_STRING_255_" iecname="stDirectory" byteoffset="93" />
+      <UserDefElement type="T_STRING_255_" iecname="stFile" byteoffset="349" />
+      <UserDefElement type="T_ARRAY__0__1__OF_STRING" iecname="filters" byteoffset="605" />
+      <UserDefElement type="T_BOOL" iecname="bInit" byteoffset="767" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbRecipeSaveAs" size="1116" nativesize="1116" typeclass="Userdef" iecname="Visu_FbRecipeSaveAs">
+      <UserDefElement type="T_ARRAY__0__1__OF_Visu_StructRecipeFileDialogParams" iecname="_allParameters" byteoffset="8" />
+      <UserDefElement type="T_ARRAY__0__1__OF_BOOL" iecname="_usedParameters" byteoffset="332" />
+      <UserDefElement type="T_Visu_StructFileDialogParams" iecname="dlgParams" byteoffset="340" />
+      <UserDefElement type="T_Visu_StructVisuFileDialogParams" iecname="dlgVisuParams" byteoffset="348" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbRecipeLoadFrom" size="1116" nativesize="1116" typeclass="Userdef" iecname="Visu_FbRecipeLoadFrom">
+      <UserDefElement type="T_ARRAY__0__1__OF_Visu_StructRecipeFileDialogParams" iecname="_allParameters" byteoffset="8" />
+      <UserDefElement type="T_ARRAY__0__1__OF_BOOL" iecname="_usedParameters" byteoffset="332" />
+      <UserDefElement type="T_Visu_StructFileDialogParams" iecname="dlgParams" byteoffset="340" />
+      <UserDefElement type="T_Visu_StructVisuFileDialogParams" iecname="dlgVisuParams" byteoffset="348" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Visu_FbPrintCommand" size="340" nativesize="340" typeclass="Userdef" iecname="Visu_FbPrintCommand">
+      <UserDefElement type="T_ARRAY__0__1__OF_Visu_StructRecipeFileDialogParams" iecname="_allParameters" byteoffset="8" />
+      <UserDefElement type="T_ARRAY__0__1__OF_BOOL" iecname="_usedParameters" byteoffset="332" />
+    </TypeUserDef>
+    <TypeUserDef name="T_VisuFbGeneralCommandWrapper" size="12" nativesize="12" typeclass="Userdef" iecname="VisuFbGeneralCommandWrapper">
+      <UserDefElement type="T_IGeneralCommand" iecname="_cmd" byteoffset="8" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__19__OF_VisuFbGeneralCommandWrapper" size="240" nativesize="240" typeclass="Array" iecname="ARRAY [0..19] OF VisuFbGeneralCommandWrapper" basetype="T_VisuFbGeneralCommandWrapper">
+      <ArrayDim minrange="0" maxrange="19" />
+    </TypeArray>
+    <TypeSimple name="T_IInternCommand" size="4" swapsize="4" typeclass="Reference" iecname="IInternCommand" />
+    <TypeArray name="T_ARRAY__0__25__OF_IInternCommand" size="104" nativesize="104" typeclass="Array" iecname="ARRAY [0..25] OF IInternCommand" basetype="T_IInternCommand">
+      <ArrayDim minrange="0" maxrange="25" />
+    </TypeArray>
+    <TypeSimple name="T_POINTER_TO_ARRAY__0__0__OF_BYTE" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO ARRAY [0..0] OF BYTE" />
+    <TypeSimple name="T_UDINT" size="4" swapsize="4" typeclass="UDInt" iecname="UDINT" />
+    <TypeUserDef name="T_VisuFb_CRC32_Compression" size="8" nativesize="8" typeclass="Userdef" iecname="VisuFb_CRC32_Compression">
+      <UserDefElement type="T_UDINT" iecname="_crc" byteoffset="4" />
+    </TypeUserDef>
+    <TypeSimple name="T_SINT" size="1" swapsize="1" typeclass="SInt" iecname="SINT" />
+    <TypeUserDef name="T__receita" size="24" nativesize="24" typeclass="Userdef" iecname="_receita">
+      <UserDefElement type="T_DINT" iecname="inicioAtraso" byteoffset="0" />
+      <UserDefElement type="T_BOOL" iecname="filmeExtra" byteoffset="4" />
+      <UserDefElement type="T_DINT" iecname="filmeMmAposFoto" byteoffset="8" />
+      <UserDefElement type="T_DINT" iecname="filmeMmExtra" byteoffset="12" />
+      <UserDefElement type="T_DINT" iecname="discoMmAposFoto" byteoffset="16" />
+      <UserDefElement type="T_DINT" iecname="discoAtraso" byteoffset="20" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__3__OF__receita" size="96" nativesize="96" typeclass="Array" iecname="ARRAY [0..3] OF _receita" basetype="T__receita">
+      <ArrayDim minrange="0" maxrange="3" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__8__OF_DINT" size="36" nativesize="36" typeclass="Array" iecname="ARRAY [0..8] OF DINT" basetype="T_DINT">
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__8__OF_REAL" size="36" nativesize="36" typeclass="Array" iecname="ARRAY [0..8] OF REAL" basetype="T_REAL">
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__30__OF_REAL" size="124" nativesize="124" typeclass="Array" iecname="ARRAY [0..30] OF REAL" basetype="T_REAL">
+      <ArrayDim minrange="0" maxrange="30" />
+    </TypeArray>
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeArray name="T_ARRAY__0__30__OF_UINT" size="62" nativesize="62" typeclass="Array" iecname="ARRAY [0..30] OF UINT" basetype="T_UINT">
+      <ArrayDim minrange="0" maxrange="30" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__30__OF_DINT" size="124" nativesize="124" typeclass="Array" iecname="ARRAY [0..30] OF DINT" basetype="T_DINT">
+      <ArrayDim minrange="0" maxrange="30" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__30__OF_BOOL" size="31" nativesize="31" typeclass="Array" iecname="ARRAY [0..30] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="30" />
+    </TypeArray>
+    <TypeUserDef name="T__oee" size="492" nativesize="492" typeclass="Userdef" iecname="_oee">
+      <UserDefElement type="T_ARRAY__0__30__OF_REAL" iecname="produtOee" byteoffset="0" />
+      <UserDefElement type="T_ARRAY__0__30__OF_UINT" iecname="dataOee" byteoffset="124" />
+      <UserDefElement type="T_ARRAY__0__30__OF_DINT" iecname="prodHorasOee" byteoffset="188" />
+      <UserDefElement type="T_ARRAY__0__30__OF_DINT" iecname="prodMinOee" byteoffset="312" />
+      <UserDefElement type="T_BOOL" iecname="habilitarZero" byteoffset="436" />
+      <UserDefElement type="T_ARRAY__0__30__OF_BOOL" iecname="pontIhm" byteoffset="437" />
+      <UserDefElement type="T_BOOL" iecname="backupRealizado" byteoffset="468" />
+      <UserDefElement type="T_DINT" iecname="dataProducaoOee" byteoffset="472" />
+      <UserDefElement type="T_DINT" iecname="mesProducaoOee" byteoffset="476" />
+      <UserDefElement type="T_UINT" iecname="dataTeste" byteoffset="480" />
+      <UserDefElement type="T_DINT" iecname="horaBackup" byteoffset="484" />
+      <UserDefElement type="T_DINT" iecname="minutoBackup" byteoffset="488" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__50__OF_BOOL" size="51" nativesize="51" typeclass="Array" iecname="ARRAY [0..50] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="50" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__23__OF_BOOL" size="24" nativesize="24" typeclass="Array" iecname="ARRAY [0..23] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="23" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__15__OF_BOOL" size="16" nativesize="16" typeclass="Array" iecname="ARRAY [0..15] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="15" />
+    </TypeArray>
+    <TypeUserDef name="T__exec_bits" size="12" nativesize="12" typeclass="Userdef" iecname="_exec_bits">
+      <UserDefElement type="T_BOOL" iecname="RQ" byteoffset="0" />
+      <UserDefElement type="T_BOOL" iecname="IP" byteoffset="1" />
+      <UserDefElement type="T_BOOL" iecname="DN" byteoffset="2" />
+      <UserDefElement type="T_DINT" iecname="Fase" byteoffset="4" />
+      <UserDefElement type="T_DINT" iecname="Mask" byteoffset="8" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__2__OF__exec_bits" size="36" nativesize="36" typeclass="Array" iecname="ARRAY [0..2] OF _exec_bits" basetype="T__exec_bits">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeUserDef name="T_AXIS_REF_PTO" size="460" nativesize="0" typeclass="Userdef" iecname="AXIS_REF_PTO" />
+    <TypeSimple name="T_MC_DIRECTION" size="2" swapsize="2" typeclass="Enum" iecname="MC_DIRECTION" />
+    <TypeSimple name="T_MC_BUFFER_MODE" size="2" swapsize="2" typeclass="Enum" iecname="MC_BUFFER_MODE" />
+    <TypeSimple name="T_PTO_ERROR" size="2" swapsize="2" typeclass="Enum" iecname="PTO_ERROR" />
+    <TypeUserDef name="T_MC_MoveVelocity_PTO" size="528" nativesize="528" typeclass="Userdef" iecname="MC_MoveVelocity_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="464" />
+      <UserDefElement type="T_BOOL" iecname="ContinuousUpdate" byteoffset="465" />
+      <UserDefElement type="T_DINT" iecname="Velocity" byteoffset="466" />
+      <UserDefElement type="T_DINT" iecname="Acceleration" byteoffset="470" />
+      <UserDefElement type="T_DINT" iecname="Deceleration" byteoffset="474" />
+      <UserDefElement type="T_MC_DIRECTION" iecname="Direction" byteoffset="478" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BufferMode" byteoffset="480" />
+      <UserDefElement type="T_BOOL" iecname="InVelocity" byteoffset="482" />
+      <UserDefElement type="T_BOOL" iecname="Busy" byteoffset="483" />
+      <UserDefElement type="T_BOOL" iecname="Active" byteoffset="484" />
+      <UserDefElement type="T_BOOL" iecname="CommandAborted" byteoffset="485" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="486" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="487" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_MoveAbsolute_PTO" size="56" nativesize="56" typeclass="Userdef" iecname="MC_MoveAbsolute_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="464" />
+      <UserDefElement type="T_DINT" iecname="Position" byteoffset="465" />
+      <UserDefElement type="T_DINT" iecname="Velocity" byteoffset="469" />
+      <UserDefElement type="T_DINT" iecname="Acceleration" byteoffset="473" />
+      <UserDefElement type="T_DINT" iecname="Deceleration" byteoffset="477" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BufferMode" byteoffset="481" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="483" />
+      <UserDefElement type="T_BOOL" iecname="Busy" byteoffset="484" />
+      <UserDefElement type="T_BOOL" iecname="Active" byteoffset="485" />
+      <UserDefElement type="T_BOOL" iecname="CommandAborted" byteoffset="486" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="487" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="488" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__2__OF_MC_MoveAbsolute_PTO" size="168" nativesize="168" typeclass="Array" iecname="ARRAY [0..2] OF MC_MoveAbsolute_PTO" basetype="T_MC_MoveAbsolute_PTO">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeUserDef name="T_MC_MoveRelative_PTO" size="56" nativesize="56" typeclass="Userdef" iecname="MC_MoveRelative_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="464" />
+      <UserDefElement type="T_DINT" iecname="Distance" byteoffset="465" />
+      <UserDefElement type="T_DINT" iecname="Velocity" byteoffset="469" />
+      <UserDefElement type="T_DINT" iecname="Acceleration" byteoffset="473" />
+      <UserDefElement type="T_DINT" iecname="Deceleration" byteoffset="477" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BufferMode" byteoffset="481" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="483" />
+      <UserDefElement type="T_BOOL" iecname="Busy" byteoffset="484" />
+      <UserDefElement type="T_BOOL" iecname="Active" byteoffset="485" />
+      <UserDefElement type="T_BOOL" iecname="CommandAborted" byteoffset="486" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="487" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="488" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__2__OF_MC_MoveRelative_PTO" size="168" nativesize="168" typeclass="Array" iecname="ARRAY [0..2] OF MC_MoveRelative_PTO" basetype="T_MC_MoveRelative_PTO">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeUserDef name="T_MC_Stop_PTO" size="32" nativesize="32" typeclass="Userdef" iecname="MC_Stop_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="464" />
+      <UserDefElement type="T_DINT" iecname="Deceleration" byteoffset="465" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="469" />
+      <UserDefElement type="T_BOOL" iecname="Busy" byteoffset="470" />
+      <UserDefElement type="T_BOOL" iecname="CommandAborted" byteoffset="471" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="472" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="473" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_SetPosition_PTO" size="24" nativesize="24" typeclass="Userdef" iecname="MC_SetPosition_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="464" />
+      <UserDefElement type="T_DINT" iecname="Position" byteoffset="465" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="469" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="470" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="471" />
+    </TypeUserDef>
+    <TypeUserDef name="T__eixo_auto" size="464" nativesize="464" typeclass="Userdef" iecname="_eixo_auto">
+      <UserDefElement type="T_MC_MoveVelocity_PTO" iecname="movVeloc" byteoffset="0" />
+      <UserDefElement type="T_ARRAY__0__2__OF_MC_MoveAbsolute_PTO" iecname="movAbs" byteoffset="72" />
+      <UserDefElement type="T_ARRAY__0__2__OF_MC_MoveRelative_PTO" iecname="movRelat" byteoffset="240" />
+      <UserDefElement type="T_MC_Stop_PTO" iecname="movStop" byteoffset="408" />
+      <UserDefElement type="T_MC_SetPosition_PTO" iecname="setPos" byteoffset="440" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__1__2__OF_MC_Stop_PTO" size="64" nativesize="64" typeclass="Array" iecname="ARRAY [1..2] OF MC_Stop_PTO" basetype="T_MC_Stop_PTO">
+      <ArrayDim minrange="1" maxrange="2" />
+    </TypeArray>
+    <TypeUserDef name="T__eixo_home" size="228" nativesize="228" typeclass="Userdef" iecname="_eixo_home">
+      <UserDefElement type="T_BOOL" iecname="RQ" byteoffset="0" />
+      <UserDefElement type="T_BOOL" iecname="IP" byteoffset="1" />
+      <UserDefElement type="T_BOOL" iecname="DN" byteoffset="2" />
+      <UserDefElement type="T_DINT" iecname="Fase" byteoffset="4" />
+      <UserDefElement type="T_DINT" iecname="Mask" byteoffset="8" />
+      <UserDefElement type="T_MC_MoveVelocity_PTO" iecname="movVeloc" byteoffset="12" />
+      <UserDefElement type="T_MC_MoveRelative_PTO" iecname="movRelat" byteoffset="84" />
+      <UserDefElement type="T_ARRAY__1__2__OF_MC_Stop_PTO" iecname="movStop" byteoffset="140" />
+      <UserDefElement type="T_MC_SetPosition_PTO" iecname="setPos" byteoffset="204" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_ReadAxisError_PTO" size="16" nativesize="16" typeclass="Userdef" iecname="MC_ReadAxisError_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Enable" byteoffset="464" />
+      <UserDefElement type="T_BOOL" iecname="Valid" byteoffset="465" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="466" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="467" />
+      <UserDefElement type="T_PTO_ERROR" iecname="AxisErrorId" byteoffset="469" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_ReadActualPosition_PTO" size="20" nativesize="20" typeclass="Userdef" iecname="MC_ReadActualPosition_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Enable" byteoffset="464" />
+      <UserDefElement type="T_BOOL" iecname="Valid" byteoffset="465" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="466" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="467" />
+      <UserDefElement type="T_DINT" iecname="Position" byteoffset="469" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_Power_PTO" size="20" nativesize="20" typeclass="Userdef" iecname="MC_Power_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Enable" byteoffset="464" />
+      <UserDefElement type="T_BOOL" iecname="DriveReady" byteoffset="465" />
+      <UserDefElement type="T_BOOL" iecname="LimP" byteoffset="466" />
+      <UserDefElement type="T_BOOL" iecname="LimN" byteoffset="467" />
+      <UserDefElement type="T_BOOL" iecname="Status" byteoffset="468" />
+      <UserDefElement type="T_BOOL" iecname="DriveEnable" byteoffset="469" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="470" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="471" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_Reset_PTO" size="16" nativesize="16" typeclass="Userdef" iecname="MC_Reset_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Execute" byteoffset="464" />
+      <UserDefElement type="T_BOOL" iecname="Done" byteoffset="465" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="466" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="467" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_ReadMotionState_PTO" size="20" nativesize="20" typeclass="Userdef" iecname="MC_ReadMotionState_PTO">
+      <UserDefElement type="T_AXIS_REF_PTO" iecname="Axis" byteoffset="4" />
+      <UserDefElement type="T_BOOL" iecname="Enable" byteoffset="464" />
+      <UserDefElement type="T_BOOL" iecname="Valid" byteoffset="465" />
+      <UserDefElement type="T_BOOL" iecname="Error" byteoffset="466" />
+      <UserDefElement type="T_PTO_ERROR" iecname="ErrorId" byteoffset="467" />
+      <UserDefElement type="T_BOOL" iecname="ConstantVelocity" byteoffset="469" />
+      <UserDefElement type="T_BOOL" iecname="Accelerating" byteoffset="470" />
+      <UserDefElement type="T_BOOL" iecname="Decelerating" byteoffset="471" />
+    </TypeUserDef>
+    <TypeUserDef name="T__eixo_drive" size="124" nativesize="124" typeclass="Userdef" iecname="_eixo_drive">
+      <UserDefElement type="T_MC_ReadAxisError_PTO" iecname="falha" byteoffset="0" />
+      <UserDefElement type="T_MC_ReadActualPosition_PTO" iecname="posicao" byteoffset="16" />
+      <UserDefElement type="T_MC_Power_PTO" iecname="power" byteoffset="36" />
+      <UserDefElement type="T_MC_Reset_PTO" iecname="reset" byteoffset="56" />
+      <UserDefElement type="T_MC_ReadMotionState_PTO" iecname="status" byteoffset="72" />
+      <UserDefElement type="T_MC_Stop_PTO" iecname="stop" byteoffset="92" />
+    </TypeUserDef>
+    <TypeUserDef name="T__eixo" size="828" nativesize="828" typeclass="Userdef" iecname="_eixo">
+      <UserDefElement type="T__eixo_auto" iecname="auto" byteoffset="0" />
+      <UserDefElement type="T__eixo_home" iecname="home" byteoffset="464" />
+      <UserDefElement type="T__eixo_drive" iecname="drive" byteoffset="692" />
+      <UserDefElement type="T_BOOL" iecname="falha" byteoffset="816" />
+      <UserDefElement type="T_DINT" iecname="posicaoAtual" byteoffset="820" />
+      <UserDefElement type="T_BOOL" iecname="calcula" byteoffset="824" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__20__OF_WSTRING" size="3402" nativesize="3402" typeclass="Array" iecname="ARRAY [0..20] OF WSTRING" basetype="T_WSTRING">
+      <ArrayDim minrange="0" maxrange="20" />
+    </TypeArray>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL">
+        <Node name="acopla" type="T__exec_bits" access="ReadWrite" />
+        <Node name="AjustaHora" type="T_BOOL" access="ReadWrite" />
+        <Node name="alarme" type="T_ARRAY__0__50__OF_BOOL" access="ReadWrite" />
+        <Node name="alarmeReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="alarmeResetInd" type="T_BOOL" access="ReadWrite" />
+        <Node name="alarmes" type="T__exec_bits" access="ReadWrite" />
+        <Node name="alarmeStr" type="T_ARRAY__0__20__OF_WSTRING" access="ReadWrite" />
+        <Node name="alwaysOff" type="T_BOOL" access="ReadWrite" />
+        <Node name="alwaysOn" type="T_BOOL" access="ReadWrite" />
+        <Node name="AnoAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="AnoSet" type="T_UINT" access="ReadWrite" />
+        <Node name="appAtraso" type="T_DINT" access="ReadWrite" />
+        <Node name="appAuto" type="T_BOOL" access="ReadWrite" />
+        <Node name="appAutoAux" type="T_SINT" access="ReadWrite" />
+        <Node name="appAutovs" type="T_BOOL" access="ReadWrite" />
+        <Node name="appDisco" type="T_DINT" access="ReadWrite" />
+        <Node name="appFilme" type="T_DINT" access="ReadWrite" />
+        <Node name="appInicio" type="T_DINT" access="ReadWrite" />
+        <Node name="arOK" type="T_BOOL" access="ReadWrite" />
+        <Node name="blisterPronto" type="T_BOOL" access="ReadWrite" />
+        <Node name="calcGeral" type="T_BOOL" access="ReadWrite" />
+        <Node name="calcTempos" type="T_BOOL" access="ReadWrite" />
+        <Node name="ciclo" type="T__exec_bits" access="ReadWrite" />
+        <Node name="ClkScan" type="T_BOOL" access="ReadWrite" />
+        <Node name="comando" type="T__exec_bits" access="ReadWrite" />
+        <Node name="comandoOff" type="T_BOOL" access="ReadWrite" />
+        <Node name="compressor" type="T__exec_bits" access="ReadWrite" />
+        <Node name="conta" type="T__exec_bits" access="ReadWrite" />
+        <Node name="contaReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="corte" type="T__exec_bits" access="ReadWrite" />
+        <Node name="DiaAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="DiaSet" type="T_UINT" access="ReadWrite" />
+        <Node name="disco" type="T__eixo" access="ReadWrite" />
+        <Node name="discoMove" type="T__exec_bits" access="ReadWrite" />
+        <Node name="discoParaImed" type="T_BOOL" access="ReadWrite" />
+        <Node name="discoPulsosAposFoto" type="T_DINT" access="ReadWrite" />
+        <Node name="discoPulsosMm" type="T_REAL" access="ReadWrite" />
+        <Node name="discoVeloc" type="T_DINT" access="ReadWrite" />
+        <Node name="emergOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="estatReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="existeAlarme" type="T_BOOL" access="ReadWrite" />
+        <Node name="falhaImpressora" type="T_BOOL" access="ReadWrite" />
+        <Node name="falhaProduto" type="T_BOOL" access="ReadWrite" />
+        <Node name="falhaSensorProd" type="T_BOOL" access="ReadWrite" />
+        <Node name="falhaTemperatura" type="T_BOOL" access="ReadWrite" />
+        <Node name="filme" type="T__eixo" access="ReadWrite" />
+        <Node name="filmeExtra" type="T_BOOL" access="ReadWrite" />
+        <Node name="filmeFotoOk" type="T_BOOL" access="ReadWrite" />
+        <Node name="filmeMove" type="T_ARRAY__0__2__OF__exec_bits" access="ReadWrite" />
+        <Node name="filmeParaImed" type="T_BOOL" access="ReadWrite" />
+        <Node name="filmePreso" type="T__exec_bits" access="ReadWrite" />
+        <Node name="filmePulsosAposFoto" type="T_DINT" access="ReadWrite" />
+        <Node name="filmePulsosExtra" type="T_DINT" access="ReadWrite" />
+        <Node name="filmePulsosMm" type="T_REAL" access="ReadWrite" />
+        <Node name="filmeVeloc" type="T_DINT" access="ReadWrite" />
+        <Node name="firstScan" type="T_BOOL" access="ReadWrite" />
+        <Node name="HoraAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="HoraSet" type="T_UINT" access="ReadWrite" />
+        <Node name="ihm_produtMedio" type="T_REAL" access="ReadWrite" />
+        <Node name="injecaoAr" type="T__exec_bits" access="ReadWrite" />
+        <Node name="injecaoTpoOff" type="T_BOOL" access="ReadWrite" />
+        <Node name="liberaCiclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="livreComando" type="T_BOOL" access="ReadWrite" />
+        <Node name="livreStart" type="T_BOOL" access="ReadWrite" />
+        <Node name="media" type="T__exec_bits" access="ReadWrite" />
+        <Node name="mensagem" type="T_ARRAY__0__50__OF_BOOL" access="ReadWrite" />
+        <Node name="MesAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="MesSet" type="T_UINT" access="ReadWrite" />
+        <Node name="MinutoAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="MinutoSet" type="T_UINT" access="ReadWrite" />
+        <Node name="modoAutomatico" type="T_BOOL" access="ReadWrite" />
+        <Node name="mudaReceita" type="T__exec_bits" access="ReadWrite" />
+        <Node name="numAlarme" type="T_SINT" access="ReadWrite" />
+        <Node name="pisca" type="T_BOOL" access="ReadWrite" />
+        <Node name="piscaRapido" type="T_BOOL" access="ReadWrite" />
+        <Node name="primeiroCiclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="principal" type="T__exec_bits" access="ReadWrite" />
+        <Node name="procedimento" type="T_ARRAY__0__2__OF__exec_bits" access="ReadWrite" />
+        <Node name="psBtCiclo" type="T_BOOL" access="ReadWrite" />
+        <Node name="SegundoAtual" type="T_UINT" access="ReadWrite" />
+        <Node name="SegundoSet" type="T_UINT" access="ReadWrite" />
+        <Node name="selag" type="T__eixo" access="ReadWrite" />
+        <Node name="selagAbre" type="T__exec_bits" access="ReadWrite" />
+        <Node name="selagemPronto" type="T_BOOL" access="ReadWrite" />
+        <Node name="selagFecha" type="T__exec_bits" access="ReadWrite" />
+        <Node name="selagPulsosFechar" type="T_DINT" access="ReadWrite" />
+        <Node name="selagPulsosMm" type="T_REAL" access="ReadWrite" />
+        <Node name="selagVeloc" type="T_DINT" access="ReadWrite" />
+        <Node name="selagVelocHome" type="T_DINT" access="ReadWrite" />
+        <Node name="sink" type="T_BOOL" access="ReadWrite" />
+        <Node name="TF_corte" type="T_TON" access="ReadWrite" />
+        <Node name="TL_disco" type="T_TON" access="ReadWrite" />
+        <Node name="TL_inicializa" type="T_TON" access="ReadWrite" />
+        <Node name="tpoDisco" type="T_TIME" access="ReadWrite" />
+        <Node name="tpoInicio" type="T_TIME" access="ReadWrite" />
+        <Node name="tpoInjecao" type="T_TIME" access="ReadWrite" />
+        <Node name="tpoSelagem" type="T_TIME" access="ReadWrite" />
+        <Node name="vsBtStart" type="T_BOOL" access="ReadWrite" />
+        <Node name="vsMarchaAutomatica" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="IHM">
+        <Node name="ihm_alarme" type="T_ARRAY__0__50__OF_BOOL" access="ReadWrite" />
+        <Node name="ihm_alarmeReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_alarmeResetInd" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_alimentadorBlister" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_bannerConfirma" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_bannerMensagem" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_carregaFabrica" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_confirmaV" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_confirmaX" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_contaAtual" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_contaGeral" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_contaReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_deletaDados" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_digitalHabilitado" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_entrada" type="T_ARRAY__0__23__OF_BOOL" access="ReadWrite" />
+        <Node name="ihm_estatReset" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_mensagem" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_numReceita" type="T_SINT" access="ReadWrite" />
+        <Node name="ihm_preso" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_realizaBackup" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_saida" type="T_ARRAY__0__15__OF_BOOL" access="ReadWrite" />
+        <Node name="ihm_salvaFabrica" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_selagHome" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_telaAtual" type="T_INT" access="ReadWrite" />
+        <Node name="ihm_telaHome" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_textoConfirma" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_textoProced" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_usuarioLoggado" type="T_BOOL" access="ReadWrite" />
+        <Node name="ihm_velocMedida" type="T_DINT" access="ReadWrite" />
+        <Node name="ihm_visibPhone" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="PERSISTENTVARS">
+        <Node name="appFormato" type="T_WSTRING" access="ReadWrite" />
+        <Node name="contaAtual" type="T_DINT" access="ReadWrite" />
+        <Node name="contaGeral" type="T_DINT" access="ReadWrite" />
+        <Node name="contaSet" type="T_DINT" access="ReadWrite" />
+        <Node name="dados" type="T__oee" access="ReadWrite" />
+        <Node name="Fb" type="T_ARRAY__0__3__OF__receita" access="ReadWrite" />
+        <Node name="histAlarmes" type="T_WSTRING" access="ReadWrite" />
+        <Node name="ihm_procedCurto" type="T_BOOL" access="ReadWrite" />
+        <Node name="indPainel" type="T_DINT" access="ReadWrite" />
+        <Node name="indSoma" type="T_BOOL" access="ReadWrite" />
+        <Node name="indSub" type="T_BOOL" access="ReadWrite" />
+        <Node name="infoTpoEnergHrs" type="T_DINT" access="ReadWrite" />
+        <Node name="infoTpoEnergMin" type="T_DINT" access="ReadWrite" />
+        <Node name="infoTpoProdHrs" type="T_DINT" access="ReadWrite" />
+        <Node name="infoTpoProdMin" type="T_DINT" access="ReadWrite" />
+        <Node name="M_diamDisco" type="T_DINT" access="ReadWrite" />
+        <Node name="M_diamRolo" type="T_DINT" access="ReadWrite" />
+        <Node name="M_discoAcel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_discoDecel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_discoPulsosVolta" type="T_DINT" access="ReadWrite" />
+        <Node name="M_discoVeloc" type="T_DINT" access="ReadWrite" />
+        <Node name="M_filmeAcel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_filmeDecel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_filmePulsosVolta" type="T_DINT" access="ReadWrite" />
+        <Node name="M_filmeVeloc" type="T_DINT" access="ReadWrite" />
+        <Node name="M_produtMedio" type="T_DINT" access="ReadWrite" />
+        <Node name="M_selagAcel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_selagDecel" type="T_DINT" access="ReadWrite" />
+        <Node name="M_selagPosFecha" type="T_DINT" access="ReadWrite" />
+        <Node name="M_selagPulsosVolta" type="T_DINT" access="ReadWrite" />
+        <Node name="M_selagTpoSelagem" type="T_DINT" access="ReadWrite" />
+        <Node name="M_selagVeloc" type="T_DINT" access="ReadWrite" />
+        <Node name="M_selagVelocHome" type="T_DINT" access="ReadWrite" />
+        <Node name="M_tpoFormato" type="T_TIME" access="ReadWrite" />
+        <Node name="M_tpoInjecaoAr" type="T_DINT" access="ReadWrite" />
+        <Node name="numReceita" type="T_SINT" access="ReadWrite" />
+        <Node name="pa" type="T_DINT" access="ReadWrite" />
+        <Node name="panData" type="T_ARRAY__0__8__OF_DINT" access="ReadWrite" />
+        <Node name="panHora" type="T_ARRAY__0__8__OF_DINT" access="ReadWrite" />
+        <Node name="panMin" type="T_ARRAY__0__8__OF_DINT" access="ReadWrite" />
+        <Node name="panProd" type="T_ARRAY__0__8__OF_REAL" access="ReadWrite" />
+        <Node name="paramFab" type="T_BOOL" access="ReadWrite" />
+        <Node name="pi" type="T_REAL" access="ReadWrite" />
+        <Node name="pt" type="T_DINT" access="ReadWrite" />
+        <Node name="pz" type="T_DINT" access="ReadWrite" />
+        <Node name="Rc" type="T_ARRAY__0__3__OF__receita" access="ReadWrite" />
+        <Node name="versaoSoftware" type="T_REAL" access="ReadWrite" />
+      </Node>
+      <Node name="VisuElems">
+        <Node name="Visu_Interfaces">
+          <Node name="GVL">
+            <Node name="g_GlobalClientManager" type="T_IVisuGlobalClientManager" access="ReadWrite" />
+            <Node name="g_VisuCommandManager" type="T_ICommandManager" access="ReadWrite" />
+          </Node>
+        </Node>
+        <Node name="VisuElemBase">
+          <Node name="GVL_COMMANDMANAGER">
+            <Node name="g_bVisuFileDialog" type="T_BOOL" access="ReadWrite" />
+            <Node name="g_VisuCommandManagerFB" type="T_CommandManager" access="ReadWrite" />
+          </Node>
+          <Node name="GVL_SHUTDOWNCHECK">
+            <Node name="bDuringShutdown" type="T_BOOL" access="ReadWrite" />
+            <Node name="interalExitChecker" type="T_Visu_FbExitChecker" access="ReadWrite" />
+          </Node>
+          <Node name="PRIVATE_VISU_GLOBALS">
+            <Node name="CHECKCLIENTSAFTERCYCLES" type="T_INT" access="ReadWrite" />
+            <Node name="g_bTooltipsActive" type="T_BOOL" access="ReadWrite" />
+            <Node name="g_ClientGen" type="T_Visu_FbClientCreator" access="ReadWrite" />
+            <Node name="g_DefaultKeyHandler" type="T_IKeyHandler" access="ReadWrite" />
+            <Node name="g_dwUserGroupNoneTextID" type="T_DWORD" access="ReadWrite" />
+            <Node name="g_EventsWrapper" type="T_Visu_FbEventWrapper" access="ReadWrite" />
+            <Node name="g_IecPaintbufferGen" type="T_Visu_FbIecPaintbufferCreator" access="ReadWrite" />
+            <Node name="g_InitOnStartup" type="T_Visu_FbInitOnStartup" access="ReadWrite" />
+            <Node name="g_InternCommandManager" type="T_IInternCommandManager" access="ReadWrite" />
+            <Node name="g_itfUserMgmtCyclicCall" type="T_IVisuUserMgmtCyclicCall" access="ReadWrite" />
+            <Node name="g_itfUserMgmtDialogManagerListener" type="T_IDialogManagerListener" access="ReadWrite" />
+            <Node name="g_MemoryManager" type="T_IMemoryManager" access="ReadWrite" />
+            <Node name="g_NativeControlManager" type="T_Visu_FbNativeControlManager" access="ReadWrite" />
+            <Node name="g_OnlineChangeChecker" type="T_Visu_FbOnlineChangeChecker" access="ReadWrite" />
+            <Node name="g_ShmPaintbufferGen" type="T_Visu_FbShmPaintbufferCreator" access="ReadWrite" />
+            <Node name="g_tTooltipWaittime" type="T_TIME" access="ReadWrite" />
+            <Node name="g_VisualizationStyle_Dummy_Inst" type="T_VisualizationStyle" access="ReadWrite" />
+            <Node name="g_VisuEventManager_Inst" type="T_Visu_FbUserEventManager" access="ReadWrite" />
+            <Node name="INITIALCLIENTDATASIZE" type="T_DINT" access="ReadWrite" />
+            <Node name="MAXIMUMUNUSEDCLIENTAGE" type="T_DWORD" access="ReadWrite" />
+            <Node name="VISU_DUMMY_VISUSWITCHCALLBACK" type="T_BOOL" access="ReadWrite" />
+          </Node>
+          <Node name="VISU_GLOBALS">
+            <Node name="CURRENTCALLER" type="T_STRING" access="ReadWrite" />
+            <Node name="CurrentClientType" type="T_VISU_CLIENTTYPE" access="ReadWrite" />
+            <Node name="CurrentFullUserName" type="T_WSTRING" access="ReadWrite" />
+            <Node name="CURRENTLANGUAGE" type="T_STRING" access="ReadWrite" />
+            <Node name="CurrentRemainingAutoLogoutTime" type="T_TIME" access="ReadWrite" />
+            <Node name="CurrentUseAutoLogoutTime" type="T_BOOL" access="ReadWrite" />
+            <Node name="CurrentUserGroupId" type="T_DWORD" access="ReadWrite" />
+            <Node name="CurrentUserGroupName" type="T_WSTRING" access="ReadWrite" />
+            <Node name="CurrentUserName" type="T_WSTRING" access="ReadWrite" />
+            <Node name="CURRENTVISU" type="T_STRING" access="ReadWrite" />
+            <Node name="g_AdditionalClientDataManager" type="T_Visu_FbClientdataManager" access="ReadWrite" />
+            <Node name="g_bStaticElementDrawing" type="T_BOOL" access="ReadWrite" />
+            <Node name="g_bVisualizationOnline" type="T_BOOL" access="ReadWrite" />
+            <Node name="g_bWstring" type="T_BOOL" access="ReadWrite" />
+            <Node name="g_ClientManager" type="T_IClientManager2" access="ReadWrite" />
+            <Node name="g_ClientManager_Inst" type="T_VisuFbClientManager" access="ReadWrite" />
+            <Node name="g_CommonDrawingRoutines" type="T_CommonDrawingRoutines" access="ReadWrite" />
+            <Node name="g_DynamicTextTranslator" type="T_VisuGlobalDynamicTextTranslator" access="ReadWrite" />
+            <Node name="g_FontScaleFactor" type="T_REAL" access="ReadWrite" />
+            <Node name="g_nSelectionGroup" type="T_INT" access="ReadWrite" />
+            <Node name="g_nSelectionType" type="T_INT" access="ReadWrite" />
+            <Node name="g_SelectionManager" type="T_ISelectionManager" access="ReadWrite" />
+            <Node name="g_SelectionManager_Inst" type="T_Visu_FbSelectionManager" access="ReadWrite" />
+            <Node name="g_VisualizationStyle" type="T_IVisualizationStyle" access="ReadWrite" />
+            <Node name="g_VisuCharSize" type="T_INT" access="ReadWrite" />
+            <Node name="g_VisuEventManager" type="T_IVisuUserEventManager" access="ReadWrite" />
+            <Node name="g_VisuManager" type="T_IVisuManager" access="ReadWrite" />
+            <Node name="g_VisuManager_Inst" type="T_Visu_FbVisuManager" access="ReadWrite" />
+            <Node name="g_VisuPaintManager" type="T_IVisuPaintManagerToUse" access="ReadWrite" />
+            <Node name="g_VisuSettings" type="T_IVisuSettingsMgr" access="ReadWrite" />
+            <Node name="g_VisuTextBuffer" type="T_ARRAY__0__2500__OF_WORD" access="ReadWrite" />
+            <Node name="SYSTEM_TEXT_LIST" type="T_STRING" access="ReadWrite" />
+            <Node name="VISU_ELEMENTCOUNT" type="T_DINT" access="ReadWrite" />
+            <Node name="VISU_ELEMENTCOUNT_WITHOUT_DIALOGS" type="T_DINT" access="ReadWrite" />
+            <Node name="VISU_EMPTYSTRING" type="T_STRING_1_" access="ReadWrite" />
+            <Node name="VISU_EMPTYWSTRING" type="T_WSTRING_1_" access="ReadWrite" />
+            <Node name="VISU_GLOBAL_TEXT_LIST" type="T_STRING" access="ReadWrite" />
+            <Node name="VISU_P_EMPTYSTRING" type="T_POINTER_TO_BYTE" access="ReadWrite" />
+            <Node name="VisuDummyDynamicImagePool" type="T_VisuStructDynamicImagePoolList" access="ReadWrite" />
+            <Node name="VisuDummyDynamicTexts" type="T_VisuStructDynamicTexts" access="ReadWrite" />
+            <Node name="VisuDummyTextProperties" type="T_VisuStructTextProperties" access="ReadWrite" />
+          </Node>
+          <Node name="VISU_INTERNCOMMANDS">
+            <Node name="_arrGeneralCommandsWrappers" type="T_ARRAY__0__19__OF_VisuFbGeneralCommandWrapper" access="ReadWrite" />
+            <Node name="_arrItfs" type="T_ARRAY__0__25__OF_IInternCommand" access="ReadWrite" />
+            <Node name="_cmdExecuteClientApp" type="T_Visu_FbExecuteClientApplication" access="ReadWrite" />
+            <Node name="_cmdExecutePlcApp" type="T_Visu_FbExecutePlcApplication" access="ReadWrite" />
+            <Node name="_cmdLoadRecipeFrom" type="T_Visu_FbRecipeLoadFrom" access="ReadWrite" />
+            <Node name="_cmdManager" type="T_Visu_FbInternCommandManager" access="ReadWrite" />
+            <Node name="_cmdPrintCommand" type="T_Visu_FbPrintCommand" access="ReadWrite" />
+            <Node name="_cmdSaveRecipeAs" type="T_Visu_FbRecipeSaveAs" access="ReadWrite" />
+            <Node name="_iGeneralCount" type="T_INT" access="ReadWrite" />
+            <Node name="cmd" type="T_IGeneralCommand" access="ReadWrite" />
+            <Node name="i" type="T_INT" access="ReadWrite" />
+            <Node name="iItfIndex" type="T_INT" access="ReadWrite" />
+            <Node name="iNext" type="T_INT" access="ReadWrite" />
+          </Node>
+          <Node name="VISU_OTHERCOMPONENTS">
+            <Node name="OptionalDataServer" type="T_IDataServer2" access="ReadWrite" />
+          </Node>
+          <Node name="VISU_PRG">
+            <Node name="allDialogsArray" type="T_ARRAY__0__100__OF_IVisualisationDialog" access="ReadWrite" />
+            <Node name="allVisusArray" type="T_ARRAY__0__200__OF_IVisualisation" access="ReadWrite" />
+            <Node name="bClientHandled" type="T_BOOL" access="ReadWrite" />
+            <Node name="bClientRequestHandled" type="T_BOOL" access="ReadWrite" />
+            <Node name="bError" type="T_BOOL" access="ReadWrite" />
+            <Node name="bFirstCall" type="T_BOOL" access="ReadWrite" />
+            <Node name="bPrint" type="T_BOOL" access="ReadWrite" />
+            <Node name="curEvent" type="T_VisuStructEvent" access="ReadWrite" />
+            <Node name="dialogManagerHelp" type="T_IDialogManager" access="ReadWrite" />
+            <Node name="i" type="T_INT" access="ReadWrite" />
+            <Node name="iClientID" type="T_INT" access="ReadWrite" />
+            <Node name="iClientManagingResult" type="T_INT" access="ReadWrite" />
+            <Node name="iCycleCountForUsageCheck" type="T_INT" access="ReadWrite" />
+            <Node name="iDialogCount" type="T_INT" access="ReadWrite" />
+            <Node name="iVisuCount" type="T_INT" access="ReadWrite" />
+            <Node name="locCurrentVisu" type="T_IVisualisation" access="ReadWrite" />
+            <Node name="manageClientData" type="T_Vish_HavetomanageClient_Data" access="ReadWrite" />
+            <Node name="pClient" type="T_POINTER_TO_VisuStructClientData" access="ReadWrite" />
+            <Node name="pTempClient" type="T_POINTER_TO_VisuStructClientData" access="ReadWrite" />
+            <Node name="stErrorReason" type="T_STRING" access="ReadWrite" />
+            <Node name="stStartupLanguage" type="T_STRING" access="ReadWrite" />
+            <Node name="targetVisu" type="T_Visu_FbTargetvisu" access="ReadWrite" />
+            <Node name="webServer" type="T_Visu_FbWebserver" access="ReadWrite" />
+          </Node>
+          <Node name="VISU_RESOURCES">
+            <Node name="ResourcesTable" type="T_Visu_ResourcesTable" access="ReadWrite" />
+          </Node>
+          <Node name="VISUCALCULATECRC32_COMPRESSION">
+            <Node name="crc" type="T_VisuFb_CRC32_Compression" access="ReadWrite" />
+            <Node name="crcValue" type="T_UDINT" access="ReadWrite" />
+            <Node name="iSize" type="T_DINT" access="ReadWrite" />
+            <Node name="pData" type="T_POINTER_TO_ARRAY__0__0__OF_BYTE" access="ReadWrite" />
+          </Node>
+        </Node>
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>

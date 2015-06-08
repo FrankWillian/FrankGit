@@ -1,0 +1,11 @@
+
+{
+	"UpdateRate": 100,
+	"PlcAddress": "0000.4003",
+	"UseLocalHost": true,
+	"Application": "Application",
+	"StartVisu": "_01_Home",
+	"BestFit": true,
+	"LogLevel": "INFO",
+	"CommBufferSize": 2048
+}

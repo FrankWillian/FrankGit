@@ -1,0 +1,42 @@
+Id;Default
+22;         Diagnostícos
+27;         Engenharia
+40;        Conta Atual
+36;        Informação
+16;    Home
+39;    Tempos
+14;%.1d
+13;%di
+20;%s
+15;:
+23;Alarme Atual
+30;Atraso Disco (s)
+29;Atraso Início (s)
+18;Auto
+33;Batidas por minuto
+6;Batidas por minuto:
+35;Conta
+4;Conta Geral
+5;Conta Geral:
+21;Formato
+2;Formato: 60 x 60
+0;Home
+24;Hístorico de Alarmes 
+12;Info
+3;Opus 30X
+28;Posição Disco (mm)
+25;Posição Filme (mm)
+31;Posição selagem (mm)
+32;Produtividade
+11;Produtividade:
+17;Reset
+1;Start
+19;Tamanho
+37;Tempo energizado 
+9;Tempo energizado (min):
+8;Tempo energizado(min):
+7;Tempo energizado:
+38;Tempo funcionando 
+10;Tempo funcionando (min):
+26;Tempo selagem (s)
+34;Tempos
